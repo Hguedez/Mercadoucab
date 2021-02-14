@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addbrand',
-  templateUrl: './addbrand.component.html',
+  templateUrl: './addBrand.component.html',
   styleUrls: ['./create.component.scss']
 })
 

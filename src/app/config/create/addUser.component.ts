@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adduser',
-  templateUrl: './adduser.component.html',
+  templateUrl: './addUser.component.html',
   styleUrls: ['./create.component.scss']
 })
 

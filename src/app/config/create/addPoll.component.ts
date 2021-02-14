@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addpoll',
-  templateUrl: './addpoll.component.html',
+  templateUrl: './addPoll.component.html',
   styleUrls: ['./create.component.scss']
 })
 

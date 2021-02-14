@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addcategory',
-  templateUrl: './addcategory.component.html',
+  templateUrl: './addCategory.component.html',
   styleUrls: ['./create.component.scss']
 })
 

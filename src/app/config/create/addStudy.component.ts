@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-addstudy',
-  templateUrl: './addstudy.component.html',
+  templateUrl: './addStudy.component.html',
   styleUrls: ['./create.component.scss']
 })
 
