@@ -73,10 +73,9 @@ export class LoginComponent implements OnInit {
         else if(auxRes.estado == 'error'){
           this.openSnackBar(auxRes.error);
         }
-        console.log(res);
       },
       err => {
-        this.openSnackBar(err);
+        console.log(err);
       }
     )
   } 
