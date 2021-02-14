@@ -1,0 +1,70 @@
+<div fxFill class="menu-bg content" fxLayout="column" fxLayoutAlign="center center">
+    <div class="title-container">
+        <h1 class="sign-in-title text-center">Solicitudes de estudio</h1>
+    </div>
+    <div>
+        <mat-form-field >
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+        </mat-form-field>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- idEstudio Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID</th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- nombreCliente Column -->
+        <ng-container matColumnDef="edadInicial">
+          <th mat-header-cell *matHeaderCellDef> Edad inicial </th>
+          <td mat-cell *matCellDef="let element"> {{element.edadInicial}} </td>
+        </ng-container>
+      
+        <!-- nombreSubcategoria Column -->
+        <ng-container matColumnDef="edadFinal">
+          <th mat-header-cell *matHeaderCellDef> Edad final </th>
+          <td mat-cell *matCellDef="let element"> {{element.edadFinal}} </td>
+        </ng-container>
+      
+        <!-- fecIniEstudio Column -->
+        <ng-container matColumnDef="genero">
+          <th mat-header-cell *matHeaderCellDef> Genero </th>
+          <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="estado">
+          <th mat-header-cell *matHeaderCellDef> Estado </th>
+          <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nivelSocioeconomico">
+          <th mat-header-cell *matHeaderCellDef> Socioeconomico </th>
+          <td mat-cell *matCellDef="let element"> {{element.nivelSocioeconomico}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="parroquia">
+          <th mat-header-cell *matHeaderCellDef> Parroquia </th>
+          <td mat-cell *matCellDef="let element"> {{element.parroquia}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="subcategoria">
+          <th mat-header-cell *matHeaderCellDef> Subcategoria </th>
+          <td mat-cell *matCellDef="let element"> {{element.subcategoria}} </td>
+        </ng-container>
+
+
+        <!-- Symbol Icon -->
+        <ng-container matColumnDef="icons">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element"><span><i class="fas fa-check-circle" style="color: #94d82d;;cursor: pointer;" (click)="activarSolicitud(element.id)"></i></span> </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" style="width: 80%;margin-left: auto;margin-right: auto;" showFirstLastButtons></mat-paginator>
+</div>
