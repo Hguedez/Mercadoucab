@@ -6,8 +6,8 @@ import { Router,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-addsample',
-  templateUrl: './AddSample.component.html',
-  styleUrls: ['./AddSample.component.scss']
+  templateUrl: './addSample.component.html',
+  styleUrls: ['./addSample.component.scss']
 })
 
 
