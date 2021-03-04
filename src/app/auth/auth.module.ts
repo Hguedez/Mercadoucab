@@ -5,9 +5,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AuthRoutingModule } from  'src/app/auth/auth-routing.module';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { RegisterComponent } from './register/register.component';
+import { CANSOComponent } from 'src/app/auth/canso/canso.component';
 
 @NgModule({
-  declarations: [LoginComponent, ForgotPasswordComponent,RegisterComponent],
+  declarations: [LoginComponent, ForgotPasswordComponent,RegisterComponent,CANSOComponent],
   imports: [
     AuthRoutingModule,
     CommonModule,
