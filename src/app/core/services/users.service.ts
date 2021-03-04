@@ -168,6 +168,14 @@ export class UsersService extends ApiService{
 
   //CANSO registration
   registerMembers(name_members:string,email_members:string,phone:string,job_title:string,organisation:string,entry_id:string,entry_date:string){
+    this.httpOptions3 = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST,GET',
+        'Access-Control-Allow-Origin': '*'
+        })
+    }
     return this.http.post('https://dev.shocklogic.com/v2/integrations/gravityforms/canso',
                           {
                           "name_members":name_members,
@@ -177,7 +185,7 @@ export class UsersService extends ApiService{
                           "organisation":organisation,
                           "entry_id": entry_id,
                           "entry_date": entry_date
-                          },this.httpOptions)
+                          },this.httpOptions3)
   }
 }
 
