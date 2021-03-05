@@ -171,9 +171,8 @@ export class UsersService extends ApiService{
     this.httpOptions3 = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Headers': 'Content-Type',
-        'Access-Control-Allow-Methods': 'POST,GET',
-        'Access-Control-Allow-Origin': '*'
+
+        
         })
     }
     return this.http.post('https://dev.shocklogic.com/v2/integrations/gravityforms/canso',
