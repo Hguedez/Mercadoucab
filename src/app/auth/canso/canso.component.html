@@ -1,17 +1,19 @@
+
 <form [formGroup]="registerMembers" (ngSubmit)="handleRegisterMember()" fxLayout="column" fxLayoutAlign="center center">
+    <h1>Create new person record</h1>
     <mat-form-field appearance="outline" >
-        <mat-label>name_members</mat-label>
-        <input matInput formControlName="name_members" type="text">
+        <mat-label>Family name</mat-label>
+        <input matInput formControlName="Family_Name" type="text">
     </mat-form-field>
     <mat-form-field appearance="outline" >
-        <mat-label>email_members</mat-label>
-        <input matInput formControlName="email_members" type="text">
+        <mat-label>First name</mat-label>
+        <input matInput formControlName="First_Name" type="text">
     </mat-form-field>
     <mat-form-field appearance="outline" >
-        <mat-label>phone</mat-label>
-        <input matInput formControlName="phone" type="text">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="Email" type="text">
     </mat-form-field>
-    <mat-form-field appearance="outline" >
+    <!-- <mat-form-field appearance="outline" >
         <mat-label>job_title</mat-label>
         <input matInput formControlName="job_title" type="text">
     </mat-form-field>
@@ -26,6 +28,6 @@
     <mat-form-field appearance="outline" >
         <mat-label>entry_date</mat-label>
         <input matInput formControlName="entry_date" type="date">
-    </mat-form-field>
-    <button mat-raised-button class="create-btn " color="primary"  style="width: 100%;font-size: large;" [disabled]="!registerMembers.valid">Register</button>
+    </mat-form-field> -->
+    <button mat-raised-button class="create-btn " color="primary"  [disabled]="!registerMembers.valid">Register</button>
 </form>

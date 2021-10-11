@@ -166,25 +166,23 @@ export class UsersService extends ApiService{
     return this.http.put(this.API_URL+'api/auth/logout/'+idUsuario,null,this.httpOptions2)
   }
 
-  //CANSO registration
-  registerMembers(name_members:string,email_members:string,phone:string,job_title:string,organisation:string,entry_id:string,entry_date:string){
+  //Pasantia
+  registerMembers(Family_Name:string,First_Name:string,Email:string){
     this.httpOptions3 = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-
+        'Content-Type': 'application/json'
         
         })
     }
-    return this.http.post('https://dev.shocklogic.com/v2/integrations/gravityforms/canso',
+    return this.http.post('https://devapi.shocklogic.com/v1.0/SL-API-61572c03e221c/Persons',
                           {
-                          "name_members":name_members,
-                          "email_members":email_members,
-                          "phone":phone,
-                          "job_title":job_title,
-                          "organisation":organisation,
-                          "entry_id": entry_id,
-                          "entry_date": entry_date
+                          "Family_Name":Family_Name,
+                          "First_Name":First_Name,
+                          "Email":Email
                           },this.httpOptions3)
   }
 }
+
+
+
 
