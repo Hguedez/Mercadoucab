@@ -28,10 +28,12 @@ export class CANSOComponent implements OnInit {
   }
 
   handleRegisterMember(){
-    let name_members = this.registerMembers.get('Family_Name').value;
-    let email_members = this.registerMembers.get('First_Name').value;
-    let phone = this.registerMembers.get('Email').value;
-    this.userService.registerMembers(name_members,email_members,phone)
+  
+    let formData = new FormData();
+    formData.append('Family_Name', this.registerMembers.get('Family_Name').value);
+    formData.append('First_Name', this.registerMembers.get('First_Name').value);
+    formData.append('Email', this.registerMembers.get('Email').value);
+    this.userService.registerMembers(formData)
     .subscribe(
       res => {
         let auxRes:any = res;

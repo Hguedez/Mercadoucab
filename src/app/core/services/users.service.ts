@@ -167,22 +167,16 @@ export class UsersService extends ApiService{
   }
 
   //Pasantia
-  registerMembers(Family_Name:string,First_Name:string,Email:string){
+  registerMembers(person:any){
     this.httpOptions3 = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
         
         })
     }
-    return this.http.post('https://devapi.shocklogic.com/v1.0/SL-API-61572c03e221c/Persons',
-                          {
-                          "Family_Name":Family_Name,
-                          "First_Name":First_Name,
-                          "Email":Email
-                          },this.httpOptions3)
+    return this.http.post('https://devapi.shocklogic.com/v1.0/SL-API-61572c03e221c/Persons',person,this.httpOptions3)
   }
 }
-
 
 
 
