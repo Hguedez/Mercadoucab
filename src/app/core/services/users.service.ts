@@ -170,7 +170,7 @@ export class UsersService extends ApiService{
   registerMembers(person:any){
     this.httpOptions3 = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
+        'Access-Control-Allow-Origin': '*'
         
         })
     }
