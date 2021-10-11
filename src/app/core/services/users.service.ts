@@ -170,7 +170,7 @@ export class UsersService extends ApiService{
   registerMembers(person:any){
     this.httpOptions3 = {
       headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': '*'
+        'Shocklogic-Api-Bypass-Ip': '190.73.0.225'
         
         })
     }
